@@ -3,10 +3,12 @@ const express = require('express')
 const app = express()
 
 app.get('/', async (req, res) => {
+	console.log("FInal healthCheck ===> ");
    res.send('Hello World from viren piranha ')
 })
 
 app.get('/healthCheck', async (req, res) => {
+	console.log("FInal healthCheck ===> ");
    res.send('Hello World from viren piranha healthCheck ')
 })
 

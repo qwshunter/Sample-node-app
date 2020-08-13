@@ -1,18 +1,21 @@
 version: 0.0
 os: linux
 files:
-- source: /
-destination: /tmp/
+  - source: server.js
+    destination: /var/www/
 hooks:
-AfterInstall:
-- location: viewModel/install_dependencies
-timeout: 100
-runas: root
-ApplicationStart:
-- location: viewModel/start_server
-timeout: 100
-runas: root
-ValidateService:
-- location: scripts/test
-timeout: 100
-runas: root
+  BeforeInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/start_server.sh
+      timeout: 300
+  ApplicationStop:
+    - location: scripts/stop_server.sh
+      timeout: 300
+      runas: root
+  ValidateService:
+    - location: scripts/validate_server.sh
+      timeout: 300
+      runas: root

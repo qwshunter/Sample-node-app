@@ -8,7 +8,5 @@ hooks:
     - location: viewModel/install_dependencies.sh
   ApplicationStart:
     - location: viewModel/start_server.sh
-  ApplicationStop:
-    - location: viewModel/stop_server.sh
   ValidateService:
     - location: viewModel/validate_server.sh

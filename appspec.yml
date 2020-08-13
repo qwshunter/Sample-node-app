@@ -5,11 +5,11 @@ files:
 destination: /tmp/
 hooks:
 AfterInstall:
-- location: scripts/install_dependencies
+- location: viewModel/install_dependencies
 timeout: 100
 runas: root
 ApplicationStart:
-- location: scripts/start_server
+- location: viewModel/start_server
 timeout: 100
 runas: root
 ValidateService:

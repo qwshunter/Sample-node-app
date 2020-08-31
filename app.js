@@ -4,12 +4,12 @@ const app = express()
 
 app.get('/', async (req, res) => {
 	console.log(" ===> ");
-   res.send('Edureka Demo Check...')
+   res.send('Edureka Demo Check..123.')
 })
 
 app.get('/healthCheck', async (req, res) => {
 	console.log("===> ");
-   res.send('Edureka Demo healthCheck ')
+   res.send('Edureka Demo healthCheck123... ')
 })
 
 const port = process.env.PORT || 3000;

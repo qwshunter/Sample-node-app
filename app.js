@@ -3,13 +3,13 @@ const express = require('express')
 const app = express()
 
 app.get('/', async (req, res) => {
-	console.log("FInal healthCheck ===> ");
-   res.send('Hello World from viren piranha ')
+	console.log(" ===> ");
+   res.send('Edureka Demo Check...')
 })
 
 app.get('/healthCheck', async (req, res) => {
-	console.log("FInal healthCheck ===> ");
-   res.send('Hello World from viren piranha healthCheck ')
+	console.log("===> ");
+   res.send('Edureka Demo healthCheck ')
 })
 
 const port = process.env.PORT || 3000;
